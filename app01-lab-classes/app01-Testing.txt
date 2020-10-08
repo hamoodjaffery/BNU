@@ -2,3 +2,10 @@ Student osaid = new Student("Osaid Jaffery", "21910918");
 Student inshal = new Student("Inshal Jaffery", "21910913");
 osaid.addCredits(20);
 inshal.addCredits(50);
+HamoodLab.enrollStudent(osaid);
+HamoodLab.printList();
+Lab class unknown
+Instructor: unknown   Room: unknown
+Class list:
+Osaid Jaffery, student ID: 21910918, credits: 20
+Number of students: 1
