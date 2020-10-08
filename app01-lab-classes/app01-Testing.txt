@@ -1,5 +1,4 @@
-LabClass co452Lab = new LabClass(3);
-Student veena = new Student("Veena Patel", "20388712");
-Student gita = new Student("Gita Ralhan", "20844312");
-Student tim = new Student("Tim Lee", "20199812");
-co452Lab.enrollStudent(gita);
+Student osaid = new Student("Osaid Jaffery", "21910918");
+Student inshal = new Student("Inshal Jaffery", "21910913");
+osaid.addCredits(20);
+inshal.addCredits(50);
