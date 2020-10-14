@@ -4,3 +4,12 @@ samuel.addCourse(computing);
 samuel.print();
 sam, student ID: 1200, credits: 0
 cyberSec, codeNumber: D401
+LabClass labClass1 = new LabClass(3);
+labClass1.setInstructor("Derek");
+labClass1.setRoom("G3.01");
+labClass1.setTime("Tuesday");
+labClass1.printList();
+Lab class Tuesday
+Instructor: Derek   Room: G3.01
+Class list:
+Number of students: 0
