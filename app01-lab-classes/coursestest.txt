@@ -1,0 +1,6 @@
+Student samuel = new Student("sam", "1200");
+Course computing = new Course("cyberSec", "D401");
+samuel.addCourse(computing);
+samuel.print();
+sam, student ID: 1200, credits: 0
+cyberSec, codeNumber: D401
