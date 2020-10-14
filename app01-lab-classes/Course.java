@@ -7,27 +7,24 @@
  */
 public class Course
 {
-    // instance variables - replace the example below with your own
-    private int x;
+    // Variables
+    
+    private String title;
+    private String codeNumber;
 
+    // Methods
+    
     /**
      * Constructor for objects of class Course
      */
-    public Course()
+    public Course(String title, String codeNumber)
     {
-        // initialise instance variables
-        x = 0;
+        this.title = title;
+        this.codeNumber = codeNumber;
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
+    public void print()
     {
-        // put your code here
-        return x + y;
+       System.out.println(title + ", codeNumber: " + codeNumber); 
     }
 }
