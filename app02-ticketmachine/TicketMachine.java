@@ -19,15 +19,26 @@ public class TicketMachine
     private int balance;
     // The total amount of money collected by this machine.
     private int total;
-
+    
+    private Ticket aylesburyTicket;
+    
+    private Ticket highwycombeTicket;
+    
+    private Ticket amershamTicket;
+    
     /**
      * Create a machine that issues tickets of the given price.
      */
-    public TicketMachine(int price)
+    public TicketMachine()
     {
-        this.price = price;
         balance = 0;
         total = 0;
+        
+        aylesburyTicket = new Ticket("Aylesbury", 220);
+        
+        highwycombeTicket = new Ticket("High Wycombe", 330);
+        
+        amershamTicket = new Ticket("Amersham", 300);
     }
 
     /**
@@ -63,7 +74,27 @@ public class TicketMachine
                                amount);
         }
     }
-
+    
+    public void insert10p()
+    {
+       balance = balance + 10;
+    }
+    
+    public void insert20p()
+    {
+        balance = balance + 20;
+    }
+    
+    public void insert100p()
+    {
+        balance = balance + 100;
+    }
+    
+    public void insert200p()
+    {
+        balance = balance + 200;
+    }
+    
     /**
      * Print a ticket if enough money has been inserted, and
      * reduce the current balance by the ticket price. Print

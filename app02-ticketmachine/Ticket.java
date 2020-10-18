@@ -1,5 +1,4 @@
 import java.util.Date;
-
 /**
  * Destination of the ticket.
  *
@@ -16,11 +15,35 @@ public class Ticket
     
     // The date and timestamp of the ticket issuance
     private Date timeStamp;
+    
     /**
      * Constructor for objects of class Ticket
+     * 
      */
-    public Ticket()
+    public Ticket(String destination, int price)
     {
+        timeStamp = new Date();
+        this.destination = destination;
+        this.price = price;
     }
-
+                
+    /**
+     * Return the ticket's destination as a string
+     * NOT NEEDED
+     */
+    public String getDestination()
+    {
+        return destination;
+    }
+    
+    /**
+     * prints the ticket
+     */    
+    public void print()
+    {
+        System.out.println("Ticekt to " + destination);
+        System.out.println("cost " + price + "p");
+        System.out.println("Issued: " + timeStamp);
+    }
 }
+     
