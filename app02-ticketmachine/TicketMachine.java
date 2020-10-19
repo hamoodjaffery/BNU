@@ -30,7 +30,7 @@ public class TicketMachine
     private Ticket amershamTicket;
     
     private Ticket selectedTicket;
-    
+      
     /**
      * Create a machine that issues tickets of the given price.
      */

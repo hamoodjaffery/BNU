@@ -1,7 +1,6 @@
 
 /**
- * Coin enumerations, accepting 10p, 20p,GBP 1.00 and GBBP 2.00
- *
+ * Coin enumerations, accepting 10p, 20p,GBP 1.00 and GBBP 2.00 coins.
  * @author Hamood Jaffery
  * @date 19.10.2020
  */
