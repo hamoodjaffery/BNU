@@ -1,12 +1,10 @@
 /**
- * TicketMachine models a ticket machine that issues
- * flat-fare tickets.
- * The price of a ticket is specified via the constructor.
- * Instances will check to ensure that a user only enters
- * sensible amounts of money, and will only print a ticket
- * if enough money has been input.
- * 
- * @author David J. Barnes and Michael Kölling
+ * TicketMachine to issue the tickets of fixed price.
+ * The price of each ticket is set out using the constructor.
+ * Testing will check to ensure that if a person enters more money than
+ * the ticket price or less than the ticket price, so the ticket machine has
+ * to work accordingly indicating less amount or more amount,
+ * if enough money has been inserted.
  * @Date 18.10.2020
  * 
  * Modified by Hamood Jaffery
@@ -15,16 +13,23 @@ public class TicketMachine
 {
     // The price of a ticket from this machine.
     private int price;
+    
     // The amount of money entered by a customer so far.
     private int balance;
+    
     // The total amount of money collected by this machine.
     private int total;
+    
+    // The current balance of a customer
+    private int currentBalance;
     
     private Ticket aylesburyTicket;
     
     private Ticket highwycombeTicket;
     
     private Ticket amershamTicket;
+    
+    private Ticket selectedTicket;
     
     /**
      * Create a machine that issues tickets of the given price.
@@ -39,14 +44,19 @@ public class TicketMachine
         highwycombeTicket = new Ticket("High Wycombe", 330);
         
         amershamTicket = new Ticket("Amersham", 300);
+        
+        selectedTicket = null;
     }
-
-    /**
-     * @Return The price of a ticket.
-     */
-    public int getPrice()
+    
+    public void selectAylesbury()
     {
-        return price;
+       
+       selectedTicket = aylesburyTicket;
+       
+       selectedTicket = highwycombeTicket;
+       
+       selectedTicket = amershamTicket;
+        
     }
 
     /**
@@ -57,7 +67,12 @@ public class TicketMachine
     {
         return balance;
     }
-
+    
+    public double getCurrentBalance()
+    {
+        return currentBalance;
+    }
+        
     /**
      * Receive an amount of money from a customer.
      * Check that the amount is sensible.
@@ -74,13 +89,7 @@ public class TicketMachine
                                amount);
         }
     }
-    
-    public void insert10p()
-    {
-       balance = balance + 10;
-    }
-    
-    public void insert20p()
+   public void insert20p()
     {
         balance = balance + 20;
     }
@@ -94,6 +103,12 @@ public class TicketMachine
     {
         balance = balance + 200;
     }
+     
+    public void insert10p()
+    {
+       balance = balance + 10;
+    }
+    
     
     /**
      * Print a ticket if enough money has been inserted, and
