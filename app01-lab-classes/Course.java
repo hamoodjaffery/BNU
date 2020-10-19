@@ -1,6 +1,6 @@
 
 /**
- * Write a description of class Course here.
+ * Describes the course and its code number. 
  *
  * @author Hamood Jaffery
  * @version 08.Oct.20 0.1
