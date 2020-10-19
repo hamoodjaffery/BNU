@@ -1,6 +1,7 @@
 import java.util.Date;
 /**
- * Destination of the ticket.
+ * Destination of the ticket is defined. Ticket should show the selected destination,
+ * its price, and date time stamp as well.
  *
  * @author Hamood Jaffery
  * @date 18.10.2020
