@@ -2,10 +2,10 @@
 dependency1.from=TicketMachine
 dependency1.to=Ticket
 dependency1.type=UsesDependency
-editor.fx.0.height=0
-editor.fx.0.width=0
-editor.fx.0.x=0
-editor.fx.0.y=0
+editor.fx.0.height=739
+editor.fx.0.width=816
+editor.fx.0.x=275
+editor.fx.0.y=-4
 objectbench.height=106
 objectbench.width=316
 package.divider.horizontal=0.6003717472118959
