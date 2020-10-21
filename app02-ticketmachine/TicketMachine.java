@@ -47,30 +47,16 @@ public class TicketMachine
 
     public void selectAylesbury()
     {
-
         selectedTicket = aylesburyTicket;
-
-        selectedTicket = highwycombeTicket;
-
-        selectedTicket = amershamTicket;
-
     }
     
     public void selectHighwycombe()
     {
-       selectedTicket = aylesburyTicket;
-
-       selectedTicket = highwycombeTicket;
-
-       selectedTicket = amershamTicket; 
+             selectedTicket = highwycombeTicket;
     }
     
     public void selectAmersham()
     {
-        selectedTicket = aylesburyTicket;
-
-        selectedTicket = highwycombeTicket;
-
         selectedTicket = amershamTicket;
     }
     
