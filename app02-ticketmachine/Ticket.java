@@ -37,6 +37,11 @@ public class Ticket
         return destination;
     }
     
+    public int getPrice()
+    {
+        return price;
+    }
+    
     /**
      * prints the ticket
      */    
