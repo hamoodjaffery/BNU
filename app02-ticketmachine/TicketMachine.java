@@ -114,6 +114,7 @@ public class TicketMachine
         balance = balance + 10;
         printBalance(10);
     }
+    
 
     /**
      * Print a ticket if enough money has been inserted, and
@@ -131,12 +132,11 @@ public class TicketMachine
             {
                 // Simulate the printing of a ticket.
                 System.out.println("##################");
-                System.out.println("# The BlueJ Line");
-                System.out.print("# Ticket to ");
+                System.out.println(" Jaffery ticket machine ");
+                System.out.print(" Ticket to ");
                 System.out.println(selectedTicket.getDestination() + 
                     " price " + price + " pence.");
-                System.out.println("##################");
-                System.out.println("currentBalance");
+                System.out.println(" current balance = " + (balance = balance -  price));
                 System.out.println();
 
                 // Update the total collected with the price.
