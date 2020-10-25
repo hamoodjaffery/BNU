@@ -1,9 +1,8 @@
 
 /**
- * Write a description of class Module here.
- *
- * Hamood Jaffery
- * 25.October.2020
+ * Module class defines the title, code num, mark and completion status of the module.
+ * @Hamood Jaffery
+ * @25.October.2020
  */
 public class Module
 {
@@ -16,7 +15,7 @@ public class Module
     private boolean completed;
     
     /**
-     * Constructor for objects of class Module
+     * Constructor of class Module stating its mark, title, code num & completed or not.
      */
     public Module(String title, String codeNo)
     {
@@ -45,7 +44,7 @@ public class Module
        return mark;        
     }
     
-    /**
+    /** Prints module's title, code num and achieved marks.
      * 
      * 
      */

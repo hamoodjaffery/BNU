@@ -1,9 +1,8 @@
 
 /**
- * Enumeration class Grades - write a description of the enum class here
- *
- * @author (your name here)
- * @version (version number or date here)
+ * Enumeration Grades - defines grading system which students shall be awarded *
+ * @Hamood Jaffery
+ * @25.October.2020
  */
 public enum Grades
 {

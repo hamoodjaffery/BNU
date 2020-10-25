@@ -1,9 +1,8 @@
 
 /**
- * Describes the course and its code number. 
- *
+ * Describes the module's title, its number, and marks achieved in each of the modules.
  * @author Hamood Jaffery
- * @version 08.Oct.20 0.1
+ * @25.October.2020
  */
 public class Course
 {

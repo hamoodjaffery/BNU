@@ -1,11 +1,10 @@
 import java.util.*;
 
 /**
- * The Student class represents a student in a student administration system.
- * It holds the student details relevant in our context.
- * 
- * @author Michael Kölling and David Barnes
- * @version 2016.02.29
+ * The Student class represents a student in student's database system. It holds 
+ * student's name, id number, course's name & credit. 
+ * @Hamood Jaffery
+ * @25.October.2020
  */
 public class Student
 {
