@@ -84,11 +84,10 @@ public class Student
     }
     
     /**
-     * Print the student's name and ID number to the output terminal.
+     * Print the student's name, student ID and marks
      */
     public void print()
     {
-        System.out.println(name + ", student ID: " + id + ", credits: " + credits);
-        course.print();
+        System.out.println(name + ", student ID: " + id +  " mark ");
     }
 }
