@@ -1,6 +1,6 @@
 
 /**
- * Enumeration Grades - defines grading system which students shall be awarded *
+ * Enumeration Grades - defines grading system which students will be awarded *
  * @Hamood Jaffery
  * @25.October.2020
  */
