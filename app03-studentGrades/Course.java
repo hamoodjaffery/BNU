@@ -15,10 +15,7 @@ public class Course
     private Module module2;    
     private Module module3;    
     private Module module4;
-    
-    private int moduleNo;
-    
-    private int noModules;
+   
     
     private int finalMark;
     
@@ -31,59 +28,117 @@ public class Course
     {
         this.title = title;
         this.codeNo = codeNo;
-        noModules = 0;
         
-        finalGrade = Grades.NULL;      
-        createModule();
+        finalGrade = Grades.NULL;
     }
-    
-    public void createModule()
-    {
-        module1 = new Module("Programming Concepts", "CO452");
-        module2 = new Module("Digital Technologies and Professional Practice", "CO454");
-        module3 = new Module("Computer Architectures", "CO450");
-        module4 = new Module("Web Development", "CO456");
-    }
-    
-    public void addModule(Module module)
-    {
-       noModules ++;
        
-       if(noModules == 1)
-       {
-           module1 = module;
-       }
-    }
-    
-    public void setModuleMark(int mark, int moduleNO)
+    public void addModule(String moduleName, String moduleCode, int moduleNumber)
     {
-      if(moduleNo == 1)
-      {
-          module1.setMark(mark);
-          module2.setMark(mark);
-          module3.setMark(mark);
-          module4.setMark(mark);
-      }
-    }
-    
-    
-    public void calculateFinalGrade()
-    {
-        if(finalMark < 40)
-        {
-            finalGrade = Grades.F;
+        switch (moduleNumber) {
+            case 1: {
+                module1 = new Module(moduleName, moduleCode);
+                break;
+            }
+            
+            case 2: {
+                module2 = new Module(moduleName, moduleCode);
+                break;
+            }
+
+            case 3: {
+                module3 = new Module(moduleName, moduleCode);
+                break;
+            }
+
+            case 4: {   
+                module4 = new Module(moduleName, moduleCode);
+                break;
+            }
+
+            default:
+                System.out.println("Only 4 modules are allowed." + 
+                "Please use module numbers 1 to 4.");
         }
-        else if((finalMark >= 40) && (finalMark < 50))
-        {
-            finalGrade = Grades.D;
-        }
     }
     
-    /**
-     *  Prints out the details of a course
-     */
-    public void print()
+    public void setModuleMark(int mark, int moduleNumber)
     {
-        System.out.println("Course " + codeNo + " - " + title);        
+        switch (moduleNumber) {
+            case 1: {
+                module1.setMark(mark);
+                break;
+            }
+            
+            case 2: {
+                module2.setMark(mark);
+                break;
+            }
+
+            case 3: {
+                module3.setMark(mark);
+                break;
+            }
+
+            case 4: {
+                module4.setMark(mark);
+                break;
+            }
+
+            default:
+                System.out.println("Only 4 modules are allowed." + 
+                "Please use module numbers 1 to 4.");
+    }
+}
+
+
+public void calculateFinalGrade()
+{
+    finalMark = (module1.getMark() 
+        + module2.getMark() 
+        + module3.getMark() 
+        + module4.getMark()) / 4; 
+   
+    if (finalMark >= 70) {
+        finalGrade = Grades.A;
+    }
+    else if (finalMark >= 60) 
+    {
+        finalGrade = Grades.B;
+    }
+    else if (finalMark >= 50)
+    {
+        finalGrade = Grades.C;
+    }
+    else if (finalMark >= 40)
+    {
+        finalGrade = Grades.D;
+    }
+    else 
+    {
+        finalGrade = Grades.F;
+    }
+}
+
+/**
+ *  Prints out the details of a course
+ */
+public void print()
+{
+    System.out.println("Course " + codeNo + " - " + title);  
+    if (module1 !=null)
+    {
+        module1.print();
+    }
+    
+    if (module2 !=null)        
+        module2.print();
+        
+    if (module3 !=null)        
+        module3.print();
+    
+    if (module4 !=null)   
+        module4.print();
+        
+        System.out.println("Final Marks: " + finalMark + ", Grade: " + finalGrade);  
     }
 }

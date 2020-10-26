@@ -28,10 +28,10 @@ public class Module
     public void setMark(int mark)
     {
        if((mark >= 0)  && (mark <=100))
-    { 
-        this.mark = mark;
-        if(mark >= 40) completed = true;
-    }
+       { 
+           this.mark = mark;
+           if(mark >= 40) completed = true;
+       }
     }
         
     public boolean isCompleted()
@@ -50,6 +50,6 @@ public class Module
      */
     public void print()
     {
-        System.out.println(" title " + " codeNo " + " mark ");      
+        System.out.println("Title: " + title + ", CodeNumber: " + codeNo + ", Mark: " + mark);      
     }
 }
