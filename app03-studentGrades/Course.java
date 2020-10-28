@@ -35,22 +35,26 @@ public class Course
     public void addModule(String moduleName, String moduleCode, int moduleNumber)
     {
         switch (moduleNumber) {
-            case 1: {
+            case 1: 
+            {
                 module1 = new Module(moduleName, moduleCode);
                 break;
             }
             
-            case 2: {
+            case 2: 
+            {
                 module2 = new Module(moduleName, moduleCode);
                 break;
             }
 
-            case 3: {
+            case 3: 
+            {
                 module3 = new Module(moduleName, moduleCode);
                 break;
             }
 
-            case 4: {   
+            case 4: 
+            {   
                 module4 = new Module(moduleName, moduleCode);
                 break;
             }
@@ -64,22 +68,26 @@ public class Course
     public void setModuleMark(int mark, int moduleNumber)
     {
         switch (moduleNumber) {
-            case 1: {
+            case 1:
+            {
                 module1.setMark(mark);
                 break;
             }
             
-            case 2: {
+            case 2:
+            {
                 module2.setMark(mark);
                 break;
             }
 
-            case 3: {
+            case 3: 
+            {
                 module3.setMark(mark);
                 break;
             }
 
-            case 4: {
+            case 4: 
+            {
                 module4.setMark(mark);
                 break;
             }
