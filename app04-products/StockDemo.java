@@ -15,12 +15,22 @@ public class StockDemo
      * Create a StockManager and populate it with a few
      * sample products.
      */
-    public StockDemo()
+    public StockDemo(StockManager manager)
     {
-        manager = new StockManager();
-        manager.addProduct(new Product(132, "Clock Radio"));
-        manager.addProduct(new Product(37,  "Mobile Phone"));
-        manager.addProduct(new Product(23,  "Microwave Oven"));
+        this.manager = manager;
+        
+        manager.addProduct(new Product(100, "Apple iPhone 11 Pro Max (128GB)"));
+        manager.addProduct(new Product(101, "Apple iPhone 11 (64GB)"));
+        manager.addProduct(new Product(102, "Apple iPhone X (128GB)"));
+        manager.addProduct(new Product(103, "Apple iPhone XR (64GB)"));
+        manager.addProduct(new Product(104, "Apple iPhone XS Max (256GB)"));
+        manager.addProduct(new Product(105, "Apple iPhone 12 (128GB)"));
+        manager.addProduct(new Product(106, "Apple iPhone 12 Pro (256GB)"));
+        manager.addProduct(new Product(107, "Sony Xperia XA2 Ultra (16GB)"));
+        manager.addProduct(new Product(108, "Sony Xperia XA2 Compact (8GB)"));
+        manager.addProduct(new Product(109, "Sony Xperia XA2 (16GB)"));
+        manager.addProduct(new Product(110, "Samsung Note 20 Ultra 5G (256GB)"));
+        manager.addProduct(new Product(111, "Samsung Note 20 (128GB)"));
     }
     
     /**
@@ -31,10 +41,10 @@ public class StockDemo
     public void demo()
     {
         // Show details of all of the products.
-        manager.printProductDetails();
+        manager.printAllProducts();
         // Take delivery of 5 items of one of the products.
         manager.delivery(132, 5);
-        manager.printProductDetails();
+        manager.printAllProducts();
     }
     
     /**
@@ -64,7 +74,7 @@ public class StockDemo
         if(product != null) 
         {
             showDetails(id);
-            product.sellOne();
+            product.sell(5);
             showDetails(id);
         }
     }

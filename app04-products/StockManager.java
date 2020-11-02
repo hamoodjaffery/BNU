@@ -40,12 +40,31 @@ public class StockManager
     }
     
     /**
+     * Sell the Product.
+     */
+    public void sellProduct(int id, int quantity)
+    {
+        Product product = findProduct(id);
+        
+        if(product != null)
+        {
+            product.sell(quantity);
+        }
+    }
+    /**
      * Try to find a product in the stock with the given id.
      * @return The identified product, or null if there is none
      *         with a matching ID.
      */
     public Product findProduct(int id)
     {
+        for(Product product : stock)
+        {
+            if(product.getID() == id)
+            {
+                return product;
+            }
+        }
         return null;
     }
     
@@ -64,7 +83,25 @@ public class StockManager
     /**
      * Print details of all the products.
      */
-    public void printProductDetails()
+    public void printAllProducts()
     {
+        printHeading();
+        
+        for(Product product : stock)
+        {
+            //product.print();
+            System.out.println(product);
+        }
+        
     }
+    
+    public void printHeading()
+    {
+    System.out.println("===========================");
+    System.out.println("Jaffery's Telecommunication");
+    System.out.println("===========================");
+    System.out.println("Jaffery's Telecommunication Stock List");
+    System.out.println(" ");
+    }
+   
 }
