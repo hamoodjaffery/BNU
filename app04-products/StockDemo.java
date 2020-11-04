@@ -1,15 +1,18 @@
+import java.util.Random;
 /**
- * Demonstrate the StockManager and Product classes.
- * The demonstration becomes properly functional as
- * the StockManager class is completed.
- * 
- * @author David J. Barnes and Michael Kölling.
- * @version 2016.02.29
+ * Stock Demo class is for testing purpose only.
+ * Modified by Hamood Jaffery
+ * 04.Nov.2020
  */
 public class StockDemo
 {
     // The stock manager.
     private StockManager manager;
+    
+    private Random generator = new Random();
+    
+    private int amount = 0;
+    
 
     /**
      * Create a StockManager and populate it with a few
@@ -38,70 +41,39 @@ public class StockDemo
      * might be used. Details of one product are shown, the
      * product is restocked, and then the details are shown again.
      */
-    public void demo()
-    {
-        // Show details of all of the products.
+   public void runDemo()
+   {
         manager.printAllProducts();
-        // Take delivery of 5 items of one of the products.
-        manager.delivery(132, 5);
-        manager.printAllProducts();
-    }
-    
-    /**
-     * Show details of the given product. If found,
-     * its name and stock quantity will be shown.
-     * @param id The ID of the product to look for.
-     */
-    public void showDetails(int id)
-    {
-        Product product = getProduct(id);
         
-        if(product != null) 
-        {
-            System.out.println(product.toString());
-        }
-    }
-    
-    /**
-     * Sell one of the given item.
-     * Show the before and after status of the product.
-     * @param id The ID of the product being sold.
-     */
-    public void sellProduct(int id)
-    {
-        Product product = getProduct(id);
+        int noProducts = manager.numberProductsInStock();
         
-        if(product != null) 
-        {
-            showDetails(id);
-            product.sell(5);
-            showDetails(id);
-        }
-    }
-    
-    /**
-     * Get the product with the given id from the manager.
-     * An error message is printed if there is no match.
-     * @param id The ID of the product.
-     * @return The Product, or null if no matching one is found.
-     */
-    public Product getProduct(int id)
-    {
-        Product product = manager.findProduct(id);
+        System.out.println("No of Products in Stock = " + noProducts);
         
-        if(product == null) 
-        {
-            System.out.println("Product with ID: " + id +
-                               " is not recognised.");
-        }
-        return product;
-    }
-
-    /**
-     * @return The stock manager.
-     */
-    public StockManager getManager()
-    {
-        return manager;
-    }
+        demoDeliverProducts();
+        demoSellProducts();
+ }
+ 
+ private void demoSellProducts()
+ {
+     for(int id = 100; id <= 111; id++)
+     {
+          amount = generator.nextInt(8);
+          manager.delivery(id, amount);
+     }
+                
+    manager.printAllProducts();
+ }
+    
+   private void demoDeliverProducts()
+   {
+        System.out.println("\nSelling all the products\n");
+        
+      for(int id = 100; id <= 111; id++)
+      {
+            amount = generator.nextInt(8);
+            manager.delivery(id, amount);
+      }
+        
+      manager.printAllProducts();
+   }
 }

@@ -1,11 +1,8 @@
 import java.util.ArrayList;
-
 /**
- * Manage the stock in a business.
- * The stock is described by zero or more Products.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * Stock Manager manages stock of Jaffery's Telecommunication.
+ * Modified by Hamood Jaffery
+ * 04.Nov.2020
  */
 public class StockManager
 {
@@ -37,6 +34,16 @@ public class StockManager
      */
     public void delivery(int id, int amount)
     {
+       Product product = findProduct(id);
+        
+       if(product != null)
+       {
+            product.deliver(amount);
+       }
+       else
+       {
+            System.out.println("\nCannot find product id " + id + "\n");
+       }
     }
     
     /**
@@ -51,6 +58,7 @@ public class StockManager
             product.sell(quantity);
         }
     }
+    
     /**
      * Try to find a product in the stock with the given id.
      * @return The identified product, or null if there is none
@@ -75,10 +83,25 @@ public class StockManager
      * @param id The ID of the product.
      * @return The quantity of the given product in stock.
      */
-    public int numberInStock(int id)
+    public int numberProductsInStock()
     {
-        return 0;
+        return stock.size();
     }
+    
+    /**
+     * Show details of the given product. If found,
+     * its name and stock quantity will be shown.
+     * @param id The ID of the product to look for.
+     */
+    public void printDetails(int id)
+    {
+        Product product = findProduct(id);
+        
+        if(product != null) 
+        {
+            System.out.println(product.toString());
+        }
+    }    
 
     /**
      * Print details of all the products.

@@ -1,8 +1,7 @@
 /**
- * Model some details of a product sold by a company.
- * 
- * @author David J. Barnes and Michael Kölling.
- * @version 2016.02.29
+ * Details of products sold by Jaffery's Telecommunication
+ * Modified by Hamood Jaffery
+ * 04.Nov.2020
  */
 public class Product
 {
@@ -72,7 +71,7 @@ public class Product
      * @param amount The number of new items added to the stock.
      *               This must be greater than zero.
      */
-    public void increaseQuantity(int amount)
+    public void deliver(int amount)
     {
         if(amount > 0) 
         {
@@ -81,7 +80,7 @@ public class Product
         else 
         {
             System.out.println("Attempt to restock " + name +
-                               " with a non-positive amount: " + amount);
+                               " with a negative or zero amount: " + amount);
         }
     }
 
@@ -90,15 +89,20 @@ public class Product
      * An error is reported if there appears to be no stock.
      */
     public void sell(int saleQuantity)
-    {
-        if(quantity >= saleQuantity) 
-        {
-            quantity -= saleQuantity;
-        }
-        else 
+    {        
+      if(saleQuantity > quantity) 
+      {
+            System.out.println("Only " + quantity + " " + name +
+                " in stock, but there were " +
+                saleQuantity + " ordered ");
+
+            quantity = 0;
+      }
+        else        
         {
             System.out.println(
-                "Attempt to sell an out of stock item: " + name);
-        }
+                "Selling " + saleQuantity + " of stock item: " + name);
+                quantity -= saleQuantity;
+      }
     }
 }
