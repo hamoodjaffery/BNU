@@ -60,6 +60,32 @@ public class StockManager
     }
     
     /**
+     * Rename the product.
+     */
+    public void renameProduct(int id, String name)
+    {
+        Product product = findProduct(id);
+        
+        if(product != null)
+        {
+            product.setName(name);
+        }
+    }
+    
+    /**
+     * Remove the product.
+     */
+    public void removeProduct(int id)
+    {
+        Product product = findProduct(id);
+        
+        if(product != null)
+        {
+            stock.remove(product);
+        }
+    }
+    
+    /**
      * Try to find a product in the stock with the given id.
      * @return The identified product, or null if there is none
      *         with a matching ID.
@@ -116,6 +142,32 @@ public class StockManager
             System.out.println(product);
         }
         
+    }
+    
+    public void printProductsWithNameContaining(String partOfName) 
+    {
+        printHeading();
+        System.out.println("Printing products with name containing: " + partOfName);
+        for (Product product: stock) 
+        {
+            if (product.getName().contains(partOfName)) 
+            {
+                System.out.println(product);
+            }
+        }
+    }
+    
+    public void printProductsWithStockLevelBelow(int stockLevel)
+    {
+       printHeading();
+        System.out.println("Printing products with stock level below " + stockLevel);
+        for (Product product: stock) 
+        {
+            if (product.getQuantity() < stockLevel) 
+            {
+                System.out.println(product);
+            }
+        }
     }
     
     public void printHeading()

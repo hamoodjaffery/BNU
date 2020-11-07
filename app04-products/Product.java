@@ -75,7 +75,7 @@ public class Product
     {
         if(amount > 0) 
         {
-            quantity += amount;
+            quantity = quantity + amount;
         }
         else 
         {

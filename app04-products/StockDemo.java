@@ -14,12 +14,12 @@ public class StockDemo
     private int amount = 0;
     
 
-    /**
-     * Create a StockManager and populate it with a few
-     * sample products.
-     */
-    public StockDemo(StockManager manager)
-    {
+ /**
+  * Create a StockManager and populate it with a few
+  * sample products.
+  */
+ public StockDemo(StockManager manager)
+ {
         this.manager = manager;
         
         manager.addProduct(new Product(100, "Apple iPhone 11 Pro Max (128GB)"));
@@ -34,15 +34,15 @@ public class StockDemo
         manager.addProduct(new Product(109, "Sony Xperia XA2 (16GB)"));
         manager.addProduct(new Product(110, "Samsung Note 20 Ultra 5G (256GB)"));
         manager.addProduct(new Product(111, "Samsung Note 20 (128GB)"));
-    }
+ }
     
-    /**
-     * Provide a very simple demonstration of how a StockManager
-     * might be used. Details of one product are shown, the
-     * product is restocked, and then the details are shown again.
-     */
-   public void runDemo()
-   {
+ /**
+  * Provide a very simple demonstration of how a StockManager
+  * might be used. Details of one product are shown, the
+  * product is restocked, and then the details are shown again.
+  */
+ public void runDemo()
+ {
         manager.printAllProducts();
         
         int noProducts = manager.numberProductsInStock();
@@ -51,6 +51,14 @@ public class StockDemo
         
         demoDeliverProducts();
         demoSellProducts();
+        demoRenameProductsById();
+        demoRemoveProductsById();
+        demoPrintProductBasedOnPartOfProductName("Apple");
+        demoPrintProductBasedOnPartOfProductName("Samsung");
+        demoPrintProductBasedOnPartOfProductName("128GB");
+        demoPrintProductBasedOnQuantityBelow(1);
+        demoPrintProductBasedOnQuantityBelow(2);
+        demoPrintProductBasedOnQuantityBelow(3);
  }
  
  private void demoSellProducts()
@@ -58,22 +66,55 @@ public class StockDemo
      for(int id = 100; id <= 111; id++)
      {
           amount = generator.nextInt(8);
-          manager.delivery(id, amount);
-     }
+          manager.sellProduct(id, amount);
+     }          
                 
-    manager.printAllProducts();
+     manager.printAllProducts();
  }
     
-   private void demoDeliverProducts()
-   {
-        System.out.println("\nSelling all the products\n");
+ private void demoDeliverProducts()
+ {
+      System.out.println("\nSelling all the products\n");
         
       for(int id = 100; id <= 111; id++)
       {
-            amount = generator.nextInt(8);
-            manager.delivery(id, amount);
+          // this will throw error when amount = 0.
+          amount = generator.nextInt(8);
+          manager.delivery(id, amount);
       }
         
       manager.printAllProducts();
-   }
+ }
+   
+ private void demoRenameProductsById() 
+ {
+       String newName = "NewName";
+       int idToRename = generateRandomId(100, 11);
+       System.out.println("\nRenaming product with ID: " + idToRename + " to new name " + newName);
+       manager.renameProduct(idToRename, newName);
+       manager.printAllProducts();
+ }
+   
+ private void demoRemoveProductsById() 
+ {
+       int idToRemove = generateRandomId(100, 11);
+       System.out.println("\nRemoving product with ID: " + idToRemove);
+       manager.removeProduct(idToRemove);
+       manager.printAllProducts();
+ }
+   
+ private void demoPrintProductBasedOnPartOfProductName(String namePart) 
+ {
+       manager.printProductsWithNameContaining(namePart);
+ }
+   
+ private void demoPrintProductBasedOnQuantityBelow(int lowStockLevel)
+ {
+       manager.printProductsWithStockLevelBelow(lowStockLevel);
+ }
+   
+ private int generateRandomId(int min, int offset) 
+ {
+       return generator.nextInt(offset) + min;    
+ }
 }
