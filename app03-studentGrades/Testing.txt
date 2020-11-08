@@ -1,0 +1,9 @@
+student1.print();
+Name: Hamood, Student ID: 21910912
+course1.print();
+Course BNUCS - CO450
+Title: Programming Concepts, CodeNumber: CO451, Mark: 100
+Title: Web Development, CodeNumber: CO452, Mark: 70
+Title: Digital Technologies, CodeNumber: CO453, Mark: 90
+Title: Cyber Threat, CodeNumber: CO454, Mark: 60
+Final Marks: 80, Grade: A
