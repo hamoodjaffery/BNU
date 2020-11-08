@@ -1,0 +1,183 @@
+StockManager m = new StockManager();
+StockDemo stockDem1 = new StockDemo(m);
+stockDem1.runDemo();
+===========================
+Jaffery's Telecommunication
+===========================
+Jaffery's Telecommunication Stock List
+ 
+100: Apple iPhone 11 Pro Max (128GB) stock level: 0
+101: Apple iPhone 11 (64GB) stock level: 0
+102: Apple iPhone X (128GB) stock level: 0
+103: Apple iPhone XR (64GB) stock level: 0
+104: Apple iPhone XS Max (256GB) stock level: 0
+105: Apple iPhone 12 (128GB) stock level: 0
+106: Apple iPhone 12 Pro (256GB) stock level: 0
+107: Sony Xperia XA2 Ultra (16GB) stock level: 0
+108: Sony Xperia XA2 Compact (8GB) stock level: 0
+109: Sony Xperia XA2 (16GB) stock level: 0
+110: Samsung Note 20 Ultra 5G (256GB) stock level: 0
+111: Samsung Note 20 (128GB) stock level: 0
+No of Products in Stock = 12
+
+Selling all the products
+
+Attempt to restock Apple iPhone 11 Pro Max (128GB) with a negative or zero amount: 0
+Attempt to restock Apple iPhone 11 (64GB) with a negative or zero amount: 0
+Attempt to restock Apple iPhone 12 Pro (256GB) with a negative or zero amount: 0
+===========================
+Jaffery's Telecommunication
+===========================
+Jaffery's Telecommunication Stock List
+ 
+100: Apple iPhone 11 Pro Max (128GB) stock level: 0
+101: Apple iPhone 11 (64GB) stock level: 0
+102: Apple iPhone X (128GB) stock level: 5
+103: Apple iPhone XR (64GB) stock level: 1
+104: Apple iPhone XS Max (256GB) stock level: 5
+105: Apple iPhone 12 (128GB) stock level: 4
+106: Apple iPhone 12 Pro (256GB) stock level: 0
+107: Sony Xperia XA2 Ultra (16GB) stock level: 2
+108: Sony Xperia XA2 Compact (8GB) stock level: 5
+109: Sony Xperia XA2 (16GB) stock level: 1
+110: Samsung Note 20 Ultra 5G (256GB) stock level: 2
+111: Samsung Note 20 (128GB) stock level: 3
+Only 0 Apple iPhone 11 Pro Max (128GB) in stock, but there were 1 ordered 
+Only 0 Apple iPhone 11 (64GB) in stock, but there were 1 ordered 
+Selling 5 of stock item: Apple iPhone X (128GB)
+Only 1 Apple iPhone XR (64GB) in stock, but there were 2 ordered 
+Selling 0 of stock item: Apple iPhone XS Max (256GB)
+Only 4 Apple iPhone 12 (128GB) in stock, but there were 6 ordered 
+Only 0 Apple iPhone 12 Pro (256GB) in stock, but there were 1 ordered 
+Only 2 Sony Xperia XA2 Ultra (16GB) in stock, but there were 5 ordered 
+Selling 2 of stock item: Sony Xperia XA2 Compact (8GB)
+Only 1 Sony Xperia XA2 (16GB) in stock, but there were 4 ordered 
+Selling 2 of stock item: Samsung Note 20 Ultra 5G (256GB)
+Only 3 Samsung Note 20 (128GB) in stock, but there were 7 ordered 
+===========================
+Jaffery's Telecommunication
+===========================
+Jaffery's Telecommunication Stock List
+ 
+100: Apple iPhone 11 Pro Max (128GB) stock level: 0
+101: Apple iPhone 11 (64GB) stock level: 0
+102: Apple iPhone X (128GB) stock level: 0
+103: Apple iPhone XR (64GB) stock level: 0
+104: Apple iPhone XS Max (256GB) stock level: 5
+105: Apple iPhone 12 (128GB) stock level: 0
+106: Apple iPhone 12 Pro (256GB) stock level: 0
+107: Sony Xperia XA2 Ultra (16GB) stock level: 0
+108: Sony Xperia XA2 Compact (8GB) stock level: 3
+109: Sony Xperia XA2 (16GB) stock level: 0
+110: Samsung Note 20 Ultra 5G (256GB) stock level: 0
+111: Samsung Note 20 (128GB) stock level: 0
+
+Renaming product with ID: 104 to new name NewName
+===========================
+Jaffery's Telecommunication
+===========================
+Jaffery's Telecommunication Stock List
+ 
+100: Apple iPhone 11 Pro Max (128GB) stock level: 0
+101: Apple iPhone 11 (64GB) stock level: 0
+102: Apple iPhone X (128GB) stock level: 0
+103: Apple iPhone XR (64GB) stock level: 0
+104: NewName stock level: 5
+105: Apple iPhone 12 (128GB) stock level: 0
+106: Apple iPhone 12 Pro (256GB) stock level: 0
+107: Sony Xperia XA2 Ultra (16GB) stock level: 0
+108: Sony Xperia XA2 Compact (8GB) stock level: 3
+109: Sony Xperia XA2 (16GB) stock level: 0
+110: Samsung Note 20 Ultra 5G (256GB) stock level: 0
+111: Samsung Note 20 (128GB) stock level: 0
+
+Removing product with ID: 100
+===========================
+Jaffery's Telecommunication
+===========================
+Jaffery's Telecommunication Stock List
+ 
+101: Apple iPhone 11 (64GB) stock level: 0
+102: Apple iPhone X (128GB) stock level: 0
+103: Apple iPhone XR (64GB) stock level: 0
+104: NewName stock level: 5
+105: Apple iPhone 12 (128GB) stock level: 0
+106: Apple iPhone 12 Pro (256GB) stock level: 0
+107: Sony Xperia XA2 Ultra (16GB) stock level: 0
+108: Sony Xperia XA2 Compact (8GB) stock level: 3
+109: Sony Xperia XA2 (16GB) stock level: 0
+110: Samsung Note 20 Ultra 5G (256GB) stock level: 0
+111: Samsung Note 20 (128GB) stock level: 0
+===========================
+Jaffery's Telecommunication
+===========================
+Jaffery's Telecommunication Stock List
+ 
+Printing products with name containing: Apple
+101: Apple iPhone 11 (64GB) stock level: 0
+102: Apple iPhone X (128GB) stock level: 0
+103: Apple iPhone XR (64GB) stock level: 0
+105: Apple iPhone 12 (128GB) stock level: 0
+106: Apple iPhone 12 Pro (256GB) stock level: 0
+===========================
+Jaffery's Telecommunication
+===========================
+Jaffery's Telecommunication Stock List
+ 
+Printing products with name containing: Samsung
+110: Samsung Note 20 Ultra 5G (256GB) stock level: 0
+111: Samsung Note 20 (128GB) stock level: 0
+===========================
+Jaffery's Telecommunication
+===========================
+Jaffery's Telecommunication Stock List
+ 
+Printing products with name containing: 128GB
+102: Apple iPhone X (128GB) stock level: 0
+105: Apple iPhone 12 (128GB) stock level: 0
+111: Samsung Note 20 (128GB) stock level: 0
+===========================
+Jaffery's Telecommunication
+===========================
+Jaffery's Telecommunication Stock List
+ 
+Printing products with stock level below 1
+101: Apple iPhone 11 (64GB) stock level: 0
+102: Apple iPhone X (128GB) stock level: 0
+103: Apple iPhone XR (64GB) stock level: 0
+105: Apple iPhone 12 (128GB) stock level: 0
+106: Apple iPhone 12 Pro (256GB) stock level: 0
+107: Sony Xperia XA2 Ultra (16GB) stock level: 0
+109: Sony Xperia XA2 (16GB) stock level: 0
+110: Samsung Note 20 Ultra 5G (256GB) stock level: 0
+111: Samsung Note 20 (128GB) stock level: 0
+===========================
+Jaffery's Telecommunication
+===========================
+Jaffery's Telecommunication Stock List
+ 
+Printing products with stock level below 2
+101: Apple iPhone 11 (64GB) stock level: 0
+102: Apple iPhone X (128GB) stock level: 0
+103: Apple iPhone XR (64GB) stock level: 0
+105: Apple iPhone 12 (128GB) stock level: 0
+106: Apple iPhone 12 Pro (256GB) stock level: 0
+107: Sony Xperia XA2 Ultra (16GB) stock level: 0
+109: Sony Xperia XA2 (16GB) stock level: 0
+110: Samsung Note 20 Ultra 5G (256GB) stock level: 0
+111: Samsung Note 20 (128GB) stock level: 0
+===========================
+Jaffery's Telecommunication
+===========================
+Jaffery's Telecommunication Stock List
+ 
+Printing products with stock level below 3
+101: Apple iPhone 11 (64GB) stock level: 0
+102: Apple iPhone X (128GB) stock level: 0
+103: Apple iPhone XR (64GB) stock level: 0
+105: Apple iPhone 12 (128GB) stock level: 0
+106: Apple iPhone 12 Pro (256GB) stock level: 0
+107: Sony Xperia XA2 Ultra (16GB) stock level: 0
+109: Sony Xperia XA2 (16GB) stock level: 0
+110: Samsung Note 20 Ultra 5G (256GB) stock level: 0
+111: Samsung Note 20 (128GB) stock level: 0
