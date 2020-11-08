@@ -1,0 +1,16 @@
+Student student2 = new Student("Hamood Jaffery", "21910912");
+Course course4 = new Course("Programming Concepts", "CO450");
+Course course5 = new Course("Web Development", "CO451");
+Course course6 = new Course("Digital Technologies", "CO453");
+student2.addCredits(500);
+student2.print();
+Hamood Jaffery, student ID: 21910912, credits: 500
+null
+Student student3 = new Student("Hamood Jaffery", "21910912");
+student3.addCredits(100);
+student3.addCourse(course4);
+student3.addCourse(course5);
+student3.addCourse(course6);
+student3.print();
+Hamood Jaffery, student ID: 21910912, credits: 100
+Course@4c75510b
