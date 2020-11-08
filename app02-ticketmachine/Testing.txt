@@ -1,0 +1,59 @@
+TicketMachine ticketmachine = new TicketMachine();
+ticketmachine.insert10p();
+10
+10
+ticketmachine.insert200p();
+200
+210
+ticketmachine.selectAmersham();
+ticketmachine.printTicket();
+You must insert at least: 90 more pence.
+ticketmachine.insert100p();
+100
+310
+ticketmachine.selectAmersham();
+ticketmachine.printTicket();
+##################
+ Jaffery ticket machine 
+ Ticket to Amersham price 300 pence.
+ current balance = 10
+
+ticketmachine.insert100p();
+100
+-190
+ticketmachine.insert100p();
+100
+-90
+ticketmachine.insert200p();
+200
+110
+ticketmachine.insert200p();
+200
+310
+ticketmachine.insert200p();
+200
+510
+ticketmachine.insert200p();
+200
+710
+ticketmachine.selectAylesbury();
+ticketmachine.selectAylesbury();
+ticketmachine.printTicket();
+##################
+ Jaffery ticket machine 
+ Ticket to Aylesbury price 220 pence.
+ current balance = 490
+
+ticketmachine.selectHighwycombe();
+ticketmachine.printTicket();
+You must insert at least: 60 more pence.
+ticketmachine.insert200p();
+200
+470
+ticketmachine.selectHighwycombe();
+ticketmachine.printTicket();
+##################
+ Jaffery ticket machine 
+ Ticket to High Wycombe price 330 pence.
+ current balance = 140
+
