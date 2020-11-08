@@ -144,10 +144,10 @@ public class StockManager
         
     }
     
-    public void printProductsWithNameContaining(String partOfName) 
+    public void printPrintProductByName(String partOfName) 
     {
         printHeading();
-        System.out.println("Printing products with name containing: " + partOfName);
+        System.out.println("Printing Products By Name: " + partOfName);
         for (Product product: stock) 
         {
             if (product.getName().contains(partOfName)) 
@@ -157,10 +157,10 @@ public class StockManager
         }
     }
     
-    public void printProductsWithStockLevelBelow(int stockLevel)
+    public void printPrintLowStock(int stockLevel)
     {
        printHeading();
-        System.out.println("Printing products with stock level below " + stockLevel);
+        System.out.println("Printing low stock products" + stockLevel);
         for (Product product: stock) 
         {
             if (product.getQuantity() < stockLevel) 

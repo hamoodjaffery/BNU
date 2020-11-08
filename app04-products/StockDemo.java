@@ -53,16 +53,19 @@ public class StockDemo
         demoSellProducts();
         demoRenameProductsById();
         demoRemoveProductsById();
-        demoPrintProductBasedOnPartOfProductName("Apple");
-        demoPrintProductBasedOnPartOfProductName("Samsung");
-        demoPrintProductBasedOnPartOfProductName("128GB");
-        demoPrintProductBasedOnQuantityBelow(1);
-        demoPrintProductBasedOnQuantityBelow(2);
-        demoPrintProductBasedOnQuantityBelow(3);
+        demoPrintProductByName("Apple");
+        demoPrintProductByName("Samsung");
+        demoPrintProductByName("128GB");
+        demoPrintLowStock(1);
+        demoPrintLowStock(2);
+        demoPrintLowStock(3);
  }
+  
  
  private void demoSellProducts()
  {
+     System.out.println("\nSelling all the products\n");
+     
      for(int id = 100; id <= 111; id++)
      {
           amount = generator.nextInt(8);
@@ -74,7 +77,7 @@ public class StockDemo
     
  private void demoDeliverProducts()
  {
-      System.out.println("\nSelling all the products\n");
+      System.out.println("\nDelivering all the products\n");
         
       for(int id = 100; id <= 111; id++)
       {
@@ -88,6 +91,8 @@ public class StockDemo
    
  private void demoRenameProductsById() 
  {
+       System.out.println("\nRename a product\n");
+       
        String newName = "NewName";
        int idToRename = generateRandomId(100, 11);
        System.out.println("\nRenaming product with ID: " + idToRename + " to new name " + newName);
@@ -103,14 +108,18 @@ public class StockDemo
        manager.printAllProducts();
  }
    
- private void demoPrintProductBasedOnPartOfProductName(String namePart) 
+ private void demoPrintProductByName(String namePart) 
  {
-       manager.printProductsWithNameContaining(namePart);
+       manager.printPrintProductByName(namePart);
+       
+       System.out.println("Printing Products By Name: ");
  }
    
- private void demoPrintProductBasedOnQuantityBelow(int lowStockLevel)
+ private void demoPrintLowStock(int lowStockLevel)
  {
-       manager.printProductsWithStockLevelBelow(lowStockLevel);
+       manager.printPrintLowStock(lowStockLevel);
+       
+       System.out.println("Printing low stock products");
  }
    
  private int generateRandomId(int min, int offset) 
