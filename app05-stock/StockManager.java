@@ -103,7 +103,7 @@ public class StockManager
     }
     
     /**
-     * Indicate if there is a duplicate id entry
+     * Indicate if there is a duplicate id
      */
     public boolean isDuplicate(int id)
     {
