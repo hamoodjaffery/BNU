@@ -19,7 +19,7 @@ public class StockManager
 
     /**
      * Add a product to the list.
-     * @param item The item to be added.
+     * 
      */
     public void addProduct(Product item)
     {
@@ -88,7 +88,7 @@ public class StockManager
     /**
      * Try to find a product in the stock with the given id.
      * @return The identified product, or null if there is none
-     *         with a matching ID.
+     *      with a matching ID.
      */
     public Product findProduct(int id)
     {
@@ -100,6 +100,19 @@ public class StockManager
             }
         }
         return null;
+    }
+    
+    /**
+     * Indicate if there is a duplicate id entry
+     */
+    public boolean isDuplicate(int id)
+    {
+        Product product = findProduct(id);
+        
+        if(product == null)
+            return false;
+        else
+            return true;
     }
     
     /**
