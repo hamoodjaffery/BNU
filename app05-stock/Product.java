@@ -79,8 +79,8 @@ public class Product
         }
         else 
         {
-            System.out.println("Attempt to restock " + name +
-                               " with a negative or zero amount: " + amount);
+            System.out.println("Can not restock " + name +
+                               " invalid amount entered!: " + amount);
         }
     }
 
@@ -89,20 +89,22 @@ public class Product
      * An error is reported if there appears to be no stock.
      */
     public void sell(int saleQuantity)
-    {        
-      if(saleQuantity > quantity) 
-      {
+    {
+      if(saleQuantity > -0) 
+        {
             System.out.println("Only " + quantity + " " + name +
                 " in stock, but there were " +
                 saleQuantity + " ordered ");
 
             quantity = 0;
-      }
-        else        
+        }
+        else 
         {
-            System.out.println(
-                "Selling " + saleQuantity + " of stock item: " + name);
+           System.out.println(
+                "Can not sell " + saleQuantity + " invalid quantity entered: " + name);
                 quantity -= saleQuantity;
-      }
+        }
+        
+     
     }
 }

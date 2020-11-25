@@ -46,9 +46,8 @@ public class StockApp
             printMenuChoices();
 
             String choice = input.getString("Please enter your choice >  ");
-            choice = choice. toUpperCase();
 
-            if(choice.equals(QUIT))
+            if(choice.compareToIgnoreCase(QUIT) == 0)
             {
                 finished = true;
             }
@@ -61,33 +60,37 @@ public class StockApp
 
     private void executeMenuChoice(String choice)
     {
-        if(choice.equals(ADD))
+        if(choice.compareToIgnoreCase(ADD) == 0)
         {
             addProduct();
         }
-        else if(choice.equals(REMOVE))
+        else if(choice.compareToIgnoreCase(REMOVE) == 0)
         {
             removeProduct();
         }
-        else if(choice.equals(PRINTALL))
+        else if(choice.compareToIgnoreCase(PRINTALL) == 0)
         {
             printAllProducts();
         }
-        else if(choice.equals("LOW"))
+        else if(choice.compareToIgnoreCase("LOW") == 0)
         {
             processLowStock(true);
         }
-        else if(choice.equals(SELL))
+        else if(choice.compareToIgnoreCase(SELL) == 0)
         {
             sellProduct();
         }
-        else if(choice.equals(DELIVER))
+        else if(choice.compareToIgnoreCase(DELIVER) == 0)
         {
             deliverProduct();
         }
-        else if(choice.equals(RESTOCK))
+        else if(choice.compareToIgnoreCase(RESTOCK) == 0)
         {
             processLowStock(false);
+        }
+        else if(choice.compareToIgnoreCase(SEARCH) == 0)
+        {
+            printProductByName();
         }
     }
 
@@ -100,24 +103,34 @@ public class StockApp
 
         String name = input.getString("Enter the product name");
 
+        // while loop will run until user enters non blank name.
+        while (isBlankString(name)) 
+        {
+            name = input.getString("Please re-enter name (empty name not allowed)");
+        }
+
         String value = input.getString("Enter a product ID");
+
+        while (isBlankString(value)) 
+        {
+            value = input.getString("Please re-enter ID (empty ID not allowed)");
+        }
 
         int id = Integer.parseInt(value);
 
-        if(manager.isDuplicate(id))
+        while (manager.isDuplicate(id)) 
         {
-            System.out.println("Duplicate id!!");
-        }
-        else
-        {
-            Product product = new Product(id, name);
-
-            manager.addProduct(product);
-
-            System.out.println("\nNew Product added " + product + "\n");
-
+            value = input.getString("Please re-enter ID (Duplicate ID)");
+            while (isBlankString(value)) 
+            {
+                value = input.getString("Please re-enter ID (empty ID not allowed)");
+            }
+            id = Integer.parseInt(value);
         }
 
+        Product product = new Product(id, name);
+        manager.addProduct(product);
+        System.out.println("\nNew Product added " + product + "\n");
     }
 
     /**
@@ -128,6 +141,13 @@ public class StockApp
         System.out.println("\nRemoving a prodcut");
 
         int id = input.getInt("Enter a product ID");
+        Product product = manager.findProduct(id);
+
+        while (product == null) 
+        {
+            id = input.getInt("Invalid ID, Enter a valid product ID");
+            product = manager.findProduct(id);
+        }
 
         manager.removeProduct(id);
     }
@@ -141,8 +161,20 @@ public class StockApp
 
         System.out.println();
         int id = input.getInt("Enter a product ID");
+        Product product = manager.findProduct(id);
+
+        while (product == null) 
+        {
+            id = input.getInt("Invalid ID, Enter a valid product ID");
+            product = manager.findProduct(id);
+        }
 
         int quantity = input.getInt("Enter the product quantity");
+
+        while (quantity < 1)
+        {
+            quantity = input.getInt("Invalid quantity entered! Enter quantity");
+        }
 
         manager.sellProduct(id, quantity);
     }
@@ -155,21 +187,36 @@ public class StockApp
         System.out.println("\nDelivering a Product");
 
         int id = input.getInt("Enter a product ID");
+        Product product = manager.findProduct(id);
+        while (product == null) 
+        {
+            id = input.getInt("Invalid ID, Enter a valid product ID");
+            product = manager.findProduct(id);
+        }
 
-        int amount = input.getInt("Enter amount");        
+        int amount = input.getInt("Enter amount");
+        while (amount < 1)
+        {
+            amount = input.getInt("Invalid amount entered! Enter amount");
+        }
+
         manager.delivery(id,amount);
+
     }
 
     /**
-     * Search the product
+     * Search the product by its name
      */
-    public void searchProduct()
+    public void printProductByName()
     {
         System.out.println("\nSearching a Product");
 
-        String value = input.getString("Enter the name of a product");
-
-        manager.printProductByName(value);        
+        String name = input.getString("Enter the product name > ");
+        while (isBlankString(name))
+        {
+            name = input.getString("Empty name is not allowed to search! Please enter the product name > ");  
+        }
+        manager.printProductByName(name);        
     }
 
     /**
@@ -179,17 +226,16 @@ public class StockApp
     {
         System.out.println("\nPrinting low level stocks"); 
 
-        int lowValue = input.getInt("Please enter the stock level");
+        int lowValue = input.getInt("Please enter the stock level > ");
 
         if(!justPrint)
         {
-            int newValue = input.getInt("Please enter the newstock level");
+            int newValue = input.getInt("Please enter the newstock level > ");
             manager.reStock(lowValue, newValue);
         }
         else
         {
             manager.printLowStock(lowValue);
-
         }
     }
 
@@ -228,5 +274,9 @@ public class StockApp
         System.out.println(" Stock Management Application ");
         System.out.println("    App05: by Hamood Jaffery");
         System.out.println("******************************");
+    }
+
+    private boolean isBlankString(String string) { 
+        return string == null || string.trim().isEmpty(); 
     }
 }
