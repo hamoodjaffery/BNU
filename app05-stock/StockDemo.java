@@ -12,6 +12,7 @@ public class StockDemo
     private Random generator = new Random();
 
     private int amount = 0;
+     
 
     /**
      * Create a StockManager and populate it with a few
@@ -106,14 +107,14 @@ public class StockDemo
 
     private void demoPrintProductByName(String namePart) 
     {
-        manager.printPrintProductByName(namePart);
+        manager.printProductByName(namePart);
 
         System.out.println("Printing Products By Name: ");
     }
 
     private void demoPrintLowStock(int lowStockLevel)
     {
-        manager.printPrintLowStock(lowStockLevel);
+        manager.printLowStock(lowStockLevel);
 
         System.out.println("Printing low stock products");
     }

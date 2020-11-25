@@ -26,7 +26,7 @@ public class Product
     }
 
     /**
-     * @return The product's id.
+     * @return product's id.
      */
     public int getID()
     {
