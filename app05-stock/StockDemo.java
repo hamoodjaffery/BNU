@@ -63,7 +63,7 @@ public class StockDemo
     {
         System.out.println("\nSelling all the products\n");
 
-        for(int id = 100; id <= 111; id++)
+        for(int id = 101; id <= 110; id++)
         {
             amount = generator.nextInt(8);
             manager.sellProduct(id, amount);
@@ -76,7 +76,7 @@ public class StockDemo
     {
         System.out.println("\nDelivering all the products\n");
 
-        for(int id = 100; id <= 111; id++)
+        for(int id = 101; id <= 110; id++)
         {
             // this will throw error when amount = 0.
             amount = generator.nextInt(8);

@@ -1,0 +1,200 @@
+Add:        Add a new product
+Remove:     Remove an old product
+Deliver:    Delivering the stock
+Sell:       Selling a product
+Restock:    Re-stocking low items
+Printall:   Print all products
+Search:     Searching the product
+Quit :      Quit the program
+
+Please enter your choice >  
+******************************
+ Stock Management Application 
+    App05: by Hamood Jaffery
+******************************
+
+Add:        Add a new product
+Remove:     Remove an old product
+Deliver:    Delivering the stock
+Sell:       Selling a product
+Restock:    Re-stocking low items
+Printall:   Print all products
+Search:     Searching the product
+Quit :      Quit the program
+
+Please enter your choice >  printall
+===========================
+Jaffery's Telecommunication
+===========================
+Jaffery's Telecommunication Stock List
+ 
+101: Apple iPhone 11 Pro Max (128GB) stock level: 0
+102: Apple iPhone 11 (64GB) stock level: 0
+103: Apple iPhone X (128GB) stock level: 0
+104: Apple iPhone XR (64GB) stock level: 0
+105: Apple iPhone XS Max (256GB) stock level: 0
+106: Apple iPhone 12 (128GB) stock level: 0
+107: Apple iPhone 12 Pro (256GB) stock level: 0
+108: Sony Xperia XA2 Ultra (16GB) stock level: 0
+109: Sony Xperia XA2 Compact (8GB) stock level: 0
+110: Sony Xperia XA2 (16GB) stock level: 0
+
+******************************
+ Stock Management Application 
+    App05: by Hamood Jaffery
+******************************
+
+Add:        Add a new product
+Remove:     Remove an old product
+Deliver:    Delivering the stock
+Sell:       Selling a product
+Restock:    Re-stocking low items
+Printall:   Print all products
+Search:     Searching the product
+Quit :      Quit the program
+
+Please enter your choice >  restock
+
+Printing low level stocks
+Please enter the stock level > 0
+Please enter the newstock level > 30
+===========================
+Jaffery's Telecommunication
+===========================
+Jaffery's Telecommunication Stock List
+ 
+Printing low stock products30
+
+******************************
+ Stock Management Application 
+    App05: by Hamood Jaffery
+******************************
+
+Add:        Add a new product
+Remove:     Remove an old product
+Deliver:    Delivering the stock
+Sell:       Selling a product
+Restock:    Re-stocking low items
+Printall:   Print all products
+Search:     Searching the product
+Quit :      Quit the program
+
+Please enter your choice >  
+******************************
+ Stock Management Application 
+    App05: by Hamood Jaffery
+******************************
+
+Add:        Add a new product
+Remove:     Remove an old product
+Deliver:    Delivering the stock
+Sell:       Selling a product
+Restock:    Re-stocking low items
+Printall:   Print all products
+Search:     Searching the product
+Quit :      Quit the program
+
+Please enter your choice >  printall
+===========================
+Jaffery's Telecommunication
+===========================
+Jaffery's Telecommunication Stock List
+ 
+101: Apple iPhone 11 Pro Max (128GB) stock level: 0
+102: Apple iPhone 11 (64GB) stock level: 0
+103: Apple iPhone X (128GB) stock level: 0
+104: Apple iPhone XR (64GB) stock level: 0
+105: Apple iPhone XS Max (256GB) stock level: 0
+106: Apple iPhone 12 (128GB) stock level: 0
+107: Apple iPhone 12 Pro (256GB) stock level: 0
+108: Sony Xperia XA2 Ultra (16GB) stock level: 0
+109: Sony Xperia XA2 Compact (8GB) stock level: 0
+110: Sony Xperia XA2 (16GB) stock level: 0
+
+******************************
+ Stock Management Application 
+    App05: by Hamood Jaffery
+******************************
+
+Add:        Add a new product
+Remove:     Remove an old product
+Deliver:    Delivering the stock
+Sell:       Selling a product
+Restock:    Re-stocking low items
+Printall:   Print all products
+Search:     Searching the product
+Quit :      Quit the program
+
+Please enter your choice >  restock
+
+Printing low level stocks
+Please enter the stock level > 5
+Please enter the newstock level > 30
+===========================
+Jaffery's Telecommunication
+===========================
+Jaffery's Telecommunication Stock List
+ 
+Printing low stock products30
+
+******************************
+ Stock Management Application 
+    App05: by Hamood Jaffery
+******************************
+
+Add:        Add a new product
+Remove:     Remove an old product
+Deliver:    Delivering the stock
+Sell:       Selling a product
+Restock:    Re-stocking low items
+Printall:   Print all products
+Search:     Searching the product
+Quit :      Quit the program
+
+Please enter your choice >  
+******************************
+ Stock Management Application 
+    App05: by Hamood Jaffery
+******************************
+
+Add:        Add a new product
+Remove:     Remove an old product
+Deliver:    Delivering the stock
+Sell:       Selling a product
+Restock:    Re-stocking low items
+Printall:   Print all products
+Search:     Searching the product
+Quit :      Quit the program
+
+Please enter your choice >  printall
+===========================
+Jaffery's Telecommunication
+===========================
+Jaffery's Telecommunication Stock List
+ 
+101: Apple iPhone 11 Pro Max (128GB) stock level: 30
+102: Apple iPhone 11 (64GB) stock level: 30
+103: Apple iPhone X (128GB) stock level: 30
+104: Apple iPhone XR (64GB) stock level: 30
+105: Apple iPhone XS Max (256GB) stock level: 30
+106: Apple iPhone 12 (128GB) stock level: 30
+107: Apple iPhone 12 Pro (256GB) stock level: 30
+108: Sony Xperia XA2 Ultra (16GB) stock level: 30
+109: Sony Xperia XA2 Compact (8GB) stock level: 30
+110: Sony Xperia XA2 (16GB) stock level: 30
+
+******************************
+ Stock Management Application 
+    App05: by Hamood Jaffery
+******************************
+
+Add:        Add a new product
+Remove:     Remove an old product
+Deliver:    Delivering the stock
+Sell:       Selling a product
+Restock:    Re-stocking low items
+Printall:   Print all products
+Search:     Searching the product
+Quit :      Quit the program
+
+Please enter your choice >  

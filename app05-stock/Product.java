@@ -40,7 +40,7 @@ public class Product
     {
         return name;
     }
-    
+
     /**
      *set The product's name.
      */
@@ -80,7 +80,7 @@ public class Product
         else 
         {
             System.out.println("Can not restock " + name +
-                               " invalid amount entered!: " + amount);
+                " invalid amount entered!: " + amount);
         }
     }
 
@@ -90,21 +90,28 @@ public class Product
      */
     public void sell(int saleQuantity)
     {
-      if(saleQuantity > -0) 
+        if(saleQuantity < 1) 
         {
-            System.out.println("Only " + quantity + " " + name +
+            System.out.println("Not enough stock" + quantity + " " + name +
                 " in stock, but there were " +
                 saleQuantity + " ordered ");
 
             quantity = 0;
         }
-        else 
-        {
-           System.out.println(
-                "Can not sell " + saleQuantity + " invalid quantity entered: " + name);
-                quantity -= saleQuantity;
+        else if(saleQuantity > quantity) {
+            System.out.println(
+                "Can not sell " + saleQuantity +  " not enough items in the stock of:" + name);
+            System.out.println(
+                "Current sellable quantity: " + quantity);
         }
-        
-     
+        else
+        {
+            quantity -= saleQuantity;
+            System.out.println(
+                "Sold " + saleQuantity +  " items in the stock of:" + name);
+            System.out.println(
+                "Remaining items in the stock of" + name + ": " + quantity);
+        }
+
     }
 }

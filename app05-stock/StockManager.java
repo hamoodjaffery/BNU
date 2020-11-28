@@ -19,7 +19,7 @@ public class StockManager
     }
 
     /**
-     * Add a product to the list.
+     * Add a product to the stock list.
      * 
      */
     public void addProduct(Product item)
