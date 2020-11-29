@@ -35,8 +35,9 @@
             demo = new StockDemo(manager);
         }
     
-        /**
-         * 
+        /**Provide a very simple demonstration of how a StockManager
+         * is linked with the StockApp. Interface details are shown
+         * the user makes a choice, and then the details are shown again.
          */
         public void run()
         {
